@@ -20,6 +20,13 @@ export class NovaTransferenciaComponent implements OnInit {
   transferir() {
     const dadosEmissao = {valor: this.valor, destino: this.destino};
     this.aoTransferir.emit(dadosEmissao);
+
+    this.limparCampos();
+  }
+
+  limparCampos(){
+    this.valor = undefined;
+    this.destino = undefined;
   }
 
 }
